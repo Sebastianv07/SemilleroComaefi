@@ -32,7 +32,7 @@ Hace falta un servidor (no basta con abrir el HTML) porque las noticias y los ev
 
 ## Publicar en GitHub Pages
 
-En el repositorio: *Settings → Pages → Deploy from a branch → `master` / `(root)`*. Todas las rutas son relativas, así que funciona bajo `usuario.github.io/repositorio/`.
+En el repositorio: *Settings → Pages → Deploy from a branch → `main` / `(root)`*. Todas las rutas son relativas, así que funciona bajo `usuario.github.io/repositorio/`.
 
 Después de publicar, en las etiquetas `og:image` de los tres HTML cambia `assets/img/og.jpg` por la URL completa (`https://usuario.github.io/repositorio/assets/img/og.jpg`). Con eso se ve la vista previa al compartir el enlace en redes o WhatsApp.
 
