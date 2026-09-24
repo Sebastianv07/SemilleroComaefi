@@ -1,0 +1,11 @@
+{
+  "cleanUrls": false,
+  "directoryListing": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/contacto", "destination": "/contacto.html" },
+    { "source": "/eventos", "destination": "/eventos.html" },
+    { "source": "/noticias", "destination": "/noticias.html" },
+    { "source": "/index", "destination": "/index.html" }
+  ]
+}

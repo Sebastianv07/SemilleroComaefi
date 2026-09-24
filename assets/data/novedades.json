@@ -1,0 +1,50 @@
+{
+  "eventos": [
+    {
+      "nombre": "Expomotricidad 2026",
+      "descripcion": "Muestra abierta de los proyectos del semillero, con talleres de expresión corporal y juegos motrices para toda la comunidad académica y sus familias.",
+      "fecha": "2026-11-14",
+      "hora": "09:00",
+      "lugar": "Coliseo del Politécnico",
+      "imagen": "assets/img/5.webp"
+    },
+    {
+      "nombre": "Motricidad fina para adultos",
+      "descripcion": "Taller práctico de ejercicios de coordinación fina y lateralidad, pensado para personas adultas que quieran explorar su motricidad.",
+      "fecha": "2026-10-08",
+      "hora": "14:30",
+      "lugar": "Sala de danzas, bloque de Educación Física",
+      "imagen": "assets/img/4.webp"
+    },
+    {
+      "nombre": "Habilidades motrices básicas en niñ@s de 5 a 11 años",
+      "descripcion": "Jornada de juego dirigida a niñas y niños, en la que los estudiantes del semillero aplican propuestas de intervención pedagógica.",
+      "fecha": "2026-05-16",
+      "hora": "08:30",
+      "lugar": "Cancha múltiple",
+      "imagen": null
+    }
+  ],
+  "noticias": [
+    {
+      "nombre": "El semillero presentó su investigación en un encuentro nacional",
+      "descripcion": "Estudiantes y docentes compartieron los avances del proyecto sobre el cuerpo como construcción social y cultural, y recibieron comentarios de otros grupos de investigación.",
+      "fecha": "2026-08-20",
+      "lugar": "Cali",
+      "imagen": "assets/img/2.webp"
+    },
+    {
+      "nombre": "Nuevos integrantes se suman al semillero",
+      "descripcion": "Una nueva cohorte de estudiantes de licenciatura en educación física, recreación y deporte inició su proceso de formación investigativa.",
+      "fecha": "2026-03-10",
+      "imagen": "assets/img/1.webp"
+    },
+    {
+      "nombre": "Conversatorios sobre corporeidad abren el semestre",
+      "descripcion": "El semillero inició un ciclo de conversatorios abiertos sobre el cuerpo, el movimiento y la cultura.\n\nCada sesión reúne a docentes y estudiantes para discutir lecturas y experiencias de aula, y está abierta a cualquier persona interesada en la motricidad.",
+      "fecha": "2026-06-02",
+      "lugar": "Auditorio de la Facultad",
+      "imagen": null
+    }
+  ]
+}

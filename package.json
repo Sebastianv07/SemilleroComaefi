@@ -1,0 +1,10 @@
+{
+  "name": "semillero-motricidad",
+  "version": "1.0.0",
+  "description": "Sitio estático del Semillero de Motricidad (COMAEFI)",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve -l 3000 ."
+  },
+  "license": "ISC"
+}

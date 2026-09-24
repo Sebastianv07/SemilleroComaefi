@@ -1,0 +1,179 @@
+/* ------------------------------------------------------------------
+   Semillero de Motricidad · COMAEFI
+   Identidad: verde institucional + los tres colores del logo (azul, dorado, verde hoja).
+   Tipografía: Bricolage Grotesque (títulos) e Instrument Sans (texto).
+------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('../vendor/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
+    font-weight: 200 800;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('../vendor/fonts/instrument-sans-latin-wght-normal.woff2') format('woff2');
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+:root {
+    --forest: #0d4e16;
+    --forest-700: #093a10;
+    --forest-050: #e8f1e6;
+    --ink: #14231a;
+    --muted: #55645a;
+    --paper: #f6f8f4;
+    --white: #fff;
+    --line: #dde5d9;
+    --blue: #2456a6;
+    --gold: #e0aa1d;
+    --leaf: #5aa62f;
+    --danger: #a4262c;
+
+    --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+    --radius: 10px;
+    --shadow: 0 1px 2px rgba(20, 35, 26, .06), 0 6px 20px rgba(20, 35, 26, .06);
+
+    --bs-body-font-family: var(--font-body);
+    --bs-body-color: var(--ink);
+    --bs-body-bg: var(--paper);
+    --bs-primary: var(--forest);
+    --bs-primary-rgb: 13, 78, 22;
+    --bs-link-color: var(--blue);
+    --bs-link-color-rgb: 36, 86, 166;
+    --bs-link-hover-color: #183d78;
+    --bs-border-color: var(--line);
+    --bs-focus-ring-color: rgba(13, 78, 22, .28);
+}
+
+html { scroll-behavior: smooth; }
+body { line-height: 1.6; }
+h1, h2, h3, h4, h5, .display-font { font-family: var(--font-display); letter-spacing: -.015em; line-height: 1.15; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.skip-link { position: absolute; left: -999px; top: 8px; background: var(--white); padding: .5rem 1rem; z-index: 2000; border-radius: 6px; }
+.skip-link:focus { left: 8px; }
+
+/* Botones y formularios con el verde institucional */
+.btn { border-radius: 8px; font-weight: 500; }
+.btn-primary {
+    --bs-btn-bg: var(--forest); --bs-btn-border-color: var(--forest);
+    --bs-btn-hover-bg: var(--forest-700); --bs-btn-hover-border-color: var(--forest-700);
+    --bs-btn-active-bg: var(--forest-700); --bs-btn-active-border-color: var(--forest-700);
+    --bs-btn-disabled-bg: var(--forest); --bs-btn-disabled-border-color: var(--forest);
+    --bs-btn-focus-shadow-rgb: 13, 78, 22;
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--forest); --bs-btn-border-color: var(--forest);
+    --bs-btn-hover-bg: var(--forest); --bs-btn-hover-border-color: var(--forest);
+    --bs-btn-active-bg: var(--forest); --bs-btn-active-border-color: var(--forest);
+    --bs-btn-focus-shadow-rgb: 13, 78, 22;
+}
+.btn-gold {
+    --bs-btn-bg: var(--gold); --bs-btn-border-color: var(--gold); --bs-btn-color: #1d1600;
+    --bs-btn-hover-bg: #c99614; --bs-btn-hover-border-color: #c99614; --bs-btn-hover-color: #1d1600;
+    --bs-btn-active-bg: #c99614; --bs-btn-active-border-color: #c99614; --bs-btn-active-color: #1d1600;
+}
+.form-control:focus, .form-select:focus { border-color: #6ea277; box-shadow: 0 0 0 .25rem rgba(13, 78, 22, .18); }
+.form-label { font-weight: 500; margin-bottom: .3rem; }
+.form-text { color: var(--muted); }
+.form-check-input:checked { background-color: var(--forest); border-color: var(--forest); }
+
+/* Motivo del logo: tres tramos azul · dorado · verde */
+.tri-bar { height: 6px; background: linear-gradient(90deg, var(--blue) 0 33.34%, var(--gold) 33.34% 66.67%, var(--leaf) 66.67%); }
+.tri-bar--short { width: 56px; height: 5px; border-radius: 3px; }
+
+/* =================== Sitio público =================== */
+.site-header { background: var(--forest); position: sticky; top: 0; z-index: 1030; }
+.site-header .navbar { --bs-navbar-color: rgba(255, 255, 255, .82); --bs-navbar-hover-color: #fff; --bs-navbar-active-color: #fff; padding-block: .6rem; }
+.site-brand { display: flex; align-items: center; gap: .65rem; color: #fff; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.1; }
+.site-brand img { width: 40px; height: 40px; background: #fff; border-radius: 50%; padding: 3px; object-fit: contain; }
+.site-brand:hover { color: #fff; }
+@media (max-width: 1199.98px) { .site-header .navbar-collapse { padding-block: .75rem 1rem; } }
+@media (min-width: 1200px) { .site-brand { margin-right: 2rem; } }
+.site-header .nav-link { padding-block: .5rem; }
+.site-header .nav-link { border-radius: 6px; padding-inline: .8rem; }
+.site-header .nav-link.active { background: rgba(255, 255, 255, .14); }
+.site-header .dropdown-menu { border-radius: var(--radius); border-color: var(--line); box-shadow: var(--shadow); }
+
+.hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
+.hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.9rem); font-weight: 800; letter-spacing: -.035em; line-height: 1; color: var(--forest); text-wrap: balance; }
+.hero-lead { font-size: 1.15rem; max-width: 34em; color: var(--muted); margin-block: 1.25rem 1.75rem; }
+.hero-figure { position: relative; padding-bottom: 2.5rem; }
+.hero-figure .photo { width: 100%; height: auto; aspect-ratio: 4 / 3.4; object-fit: cover; border-radius: 18px; box-shadow: var(--shadow); display: block; }
+.hero-figure .logo-badge { position: absolute; left: -12px; bottom: 0; width: clamp(110px, 24%, 150px); aspect-ratio: 1; background: #fff; border-radius: 50%; padding: 10px; box-shadow: var(--shadow); object-fit: contain; }
+
+.story, .preview { scroll-margin-top: 4.5rem; }
+.story { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.story + .story { border-top: 1px solid var(--line); }
+.story h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 700; color: var(--forest); margin-top: .9rem; margin-bottom: 1rem; }
+.story p { max-width: 62ch; }
+.story img { width: 100%; height: auto; border-radius: 14px; box-shadow: var(--shadow); aspect-ratio: 4 / 3; object-fit: cover; }
+.story img.focus-top { object-position: center 25%; }
+.goal-list { list-style: none; padding: 0; display: grid; gap: .9rem; max-width: 62ch; }
+.goal-list li { padding-left: 1.1rem; border-left: 4px solid var(--gold); }
+
+.page-head { padding: clamp(2rem, 5vw, 3.5rem) 0 1.5rem; }
+.page-head h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); font-weight: 800; color: var(--forest); letter-spacing: -.03em; margin: .8rem 0 .4rem; }
+.page-head p { color: var(--muted); max-width: 55ch; margin: 0; }
+
+/* Tarjetas de eventos y noticias */
+.item-card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; height: 100%; display: flex; flex-direction: column; }
+.item-card .cover { aspect-ratio: 16 / 9; width: 100%; object-fit: cover; background: var(--forest-050); display: block; }
+.item-card .cover--empty { display: grid; place-items: center; }
+.item-card .cover--empty img { width: 38%; opacity: .9; }
+.item-card .body { padding: 1.15rem 1.25rem 1.35rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+.item-card h2, .item-card h3 { font-size: 1.25rem; font-weight: 700; margin: 0; }
+.item-card .desc { color: var(--muted); margin: 0; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.item-card .facts { list-style: none; margin: 0; padding: 0; font-size: .92rem; display: grid; gap: .2rem; }
+.item-card .facts b { font-weight: 600; }
+.item-card .actions { margin-top: auto; padding-top: .5rem; }
+.date-chip { align-self: flex-start; font-family: var(--font-display); font-weight: 700; font-size: .85rem; background: var(--forest-050); color: var(--forest); border-radius: 6px; padding: .2rem .55rem; }
+.date-chip.past { background: #eceeea; color: var(--muted); }
+
+.state-box { border: 1px dashed #b7c4b3; border-radius: 14px; padding: 2.5rem 1.5rem; text-align: center; color: var(--muted); background: rgba(255, 255, 255, .6); }
+.state-box h2 { font-size: 1.25rem; color: var(--ink); }
+
+.site-footer { background: var(--forest-700); color: rgba(255, 255, 255, .86); margin-top: 4rem; }
+.site-footer h2 { font-size: 1rem; color: #fff; font-weight: 700; }
+.site-footer a { color: #fff; }
+.site-footer address { font-style: normal; margin: 0; }
+.site-footer .legal { border-top: 1px solid rgba(255, 255, 255, .15); font-size: .9rem; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* Vista previa en la portada, filtros y detalle */
+.preview { padding-block: clamp(2rem, 5vw, 3.5rem); }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem; margin-bottom: 1.5rem; }
+.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; color: var(--forest); margin: 0; }
+.section-head a { font-weight: 500; }
+.filters { margin-bottom: 1.5rem; }
+.filters .count { display: inline-block; min-width: 1.4em; margin-left: .25rem; padding: 0 .35em; border-radius: 99px; background: var(--forest-050); color: var(--forest); font-size: .8em; font-weight: 700; }
+.filters .btn-check:checked + .btn .count { background: rgba(255, 255, 255, .22); color: #fff; }
+.btn-link { --bs-btn-color: var(--blue); --bs-btn-hover-color: #183d78; --bs-btn-active-color: #183d78; font-weight: 500; }
+.modal-content { border-radius: 14px; border-color: var(--line); }
+.detail-cover { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; background: var(--forest-050); }
+.facts { list-style: none; margin: 0; padding: 0; }
+
+/* Botón para volver arriba */
+.back-to-top { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 1025; width: 48px; height: 48px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--forest); color: #fff; box-shadow: var(--shadow); cursor: pointer; }
+.back-to-top[hidden] { display: none; }
+.back-to-top:hover { background: var(--forest-700); }
+
+/* Contacto e inscripción */
+.form-panel { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: clamp(1.25rem, 3vw, 2rem); box-shadow: var(--shadow); }
+.form-panel:has(.contact-success) { text-align: center; }
+.contact-aside { padding: 1.5rem; border-left: 4px solid var(--gold); background: rgba(255, 255, 255, .6); border-radius: 0 14px 14px 0; }
+.contact-aside h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--forest); }
+.contact-aside h3 { font-size: 1rem; margin: 1.25rem 0 .35rem; }
+.contact-aside address { margin-bottom: 0; }
+.demo-note { font-size: .85rem; color: var(--muted); }
+.success-mark { width: 64px; height: 64px; margin: 0 auto 1rem; display: grid; place-items: center; border-radius: 50%; background: var(--forest-050); color: var(--forest); }
+.ticket strong { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .02em; color: var(--forest); }
+.enroll-event { padding: .75rem 1rem; background: var(--forest-050); border-radius: 10px; text-align: left; }
+.text-center .enroll-event { text-align: center; }
+.enrolled { display: inline-flex; align-items: center; gap: .35rem; font-size: .9rem; }
+.enrolled-note { display: inline-flex; align-items: center; gap: .4rem; color: var(--forest); font-weight: 600; }
